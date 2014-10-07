@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Addin name="Android Signature Tool"
+		id="AndroidSigTool" 
+       namespace="AndroidSigToolAddin"
+       author="Jon Dick" 
+       copyright="Jon Dick" 
+       description="Helps find your MD5 and SHA1 signatures of your .keystore files, including the default Xamarin.Android generated debug.keystore file" 
+       category="IDE extensions"
+       url= "http://redth.codes"
+       version="1.0" 
+       flags="None">
+	<Runtime>	
+		<Import assembly="AndroidSignatureTool.dll" />
+	</Runtime>
+    <Dependencies>
+		<Addin id="::MonoDevelop.Core" version="5.0" />
+		<Addin id="::MonoDevelop.Ide" version="5.0" />
+		<Addin id="::MonoDevelop.DesignerSupport" version="5.0" />
+		<Addin id="::MonoDevelop.SourceEditor2" version="5.0" />
+    </Dependencies>
+	<Extension path = "/MonoDevelop/Ide/Commands/Tools">  
+        <Command id = "AndroidSignatureTool"  
+                 _label = "Android Signature Tool"  
+                 _description = "Find MD5 and SHA1 signatures for .keystore files"
+                  defaultHandler = "AndroidSigToolAddin.SignatureToolCommandHandler" />  
+    </Extension> 
+<!--	<Extension path = "/MonoDevelop/Ide/Commands/Project">  
+    <Command id = "DavesAddin.VersionChangerCommands.UpdateVersions"  
+             _label = "Update Version"  
+             _description = "Change the version numbers"
+             defaultHandler = "DavesAddin.VersionChangerHandler" />  
+    </Extension>  -->
+    <Extension path = "/MonoDevelop/Ide/MainMenu/Tools">  
+        <CommandItem id="AndroidSignatureTool" />  
+    </Extension>
+<!--    <Extension path = "/MonoDevelop/Ide/ContextMenu/ProjectPad">
+		 <Condition id="ItemType" value="Solution">
+			<CommandItem id ="DavesAddin.VersionChangerCommands.UpdateVersions" />
+		</Condition>
+	</Extension>  -->
+</Addin>
