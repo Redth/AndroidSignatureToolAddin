@@ -5,7 +5,7 @@
        author="Jon Dick" 
        copyright="Jon Dick" 
        description="Helps find your MD5 and SHA1 signatures of your .keystore files, including the default Xamarin.Android generated debug.keystore file" 
-       category="IDE extensions"
+       category="Mobile Development"
        url= "http://redth.codes"
        version="1.0" 
        flags="None">
