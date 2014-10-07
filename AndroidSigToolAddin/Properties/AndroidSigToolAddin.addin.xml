@@ -10,7 +10,7 @@
        version="1.0" 
        flags="None">
 	<Runtime>	
-		<Import assembly="AndroidSignatureTool.dll" />
+		<Import assembly="AndroidSigToolAddin.dll" />
 	</Runtime>
     <Dependencies>
 		<Addin id="::MonoDevelop.Core" version="5.0" />
