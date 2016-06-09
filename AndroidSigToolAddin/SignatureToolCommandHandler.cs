@@ -1,8 +1,8 @@
 ﻿using System;
 using MonoDevelop.Components.Commands;
 using MonoDevelop.Ide;
-using Mono.TextEditor;
-using System.Diagnostics;
+using MonoDevelop.Ide.Gui.Content;
+using MonoDevelop.Projects;
 using AndroidSigToolAddin.Dialogs;
 
 namespace AndroidSigToolAddin
@@ -23,7 +23,7 @@ namespace AndroidSigToolAddin
     		}
     		catch (Exception ex)
     		{
-    			MessageService.ShowException (ex);
+                MessageService.ShowError ("Error", ex);
     		}
 		}
 

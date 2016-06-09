@@ -7,17 +7,17 @@
        description="Helps find your MD5 and SHA1 signatures of your .keystore files, including the default Xamarin.Android generated debug.keystore file" 
        category="Mobile Development"
        url= "http://redth.codes"
-       version="1.0" 
+       version="1.0.1" 
        flags="None">
 	<Runtime>	
 		<Import assembly="AndroidSigToolAddin.dll" />
 	</Runtime>
-    <Dependencies>
+    <!-- <Dependencies>
 		<Addin id="::MonoDevelop.Core" version="5.0" />
 		<Addin id="::MonoDevelop.Ide" version="5.0" />
 		<Addin id="::MonoDevelop.DesignerSupport" version="5.0" />
 		<Addin id="::MonoDevelop.SourceEditor2" version="5.0" />
-    </Dependencies>
+    </Dependencies> -->
 	<Extension path = "/MonoDevelop/Ide/Commands/Tools">  
         <Command id = "AndroidSignatureTool"  
                  _label = "Android Signature Tool"  
