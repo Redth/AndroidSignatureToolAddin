@@ -5,84 +5,120 @@ namespace AndroidSigToolAddin.Dialogs
 	public partial class SignatureToolDialog
 	{
 		private global::Gtk.Frame frame2;
-		
+
 		private global::Gtk.Alignment GtkAlignment1;
-		
+
 		private global::Gtk.HBox hbox1;
-		
+
 		private global::Gtk.Entry entryKeytool;
-		
+
 		private global::Gtk.Button buttonBrowseKeytool;
-		
+
 		private global::Gtk.Label GtkLabel2;
-		
+
+		private global::Gtk.Frame frame7;
+
+		private global::Gtk.Alignment GtkAlignment6;
+
+		private global::Gtk.HBox hbox6;
+
+		private global::Gtk.Entry entryOpenssl;
+
+		private global::Gtk.Button buttonBrowseOpenSsl;
+
+		private global::Gtk.Label GtkLabel16;
+
 		private global::Gtk.Frame frame3;
-		
+
 		private global::Gtk.Alignment GtkAlignment2;
-		
+
 		private global::Gtk.VBox vbox2;
-		
+
 		private global::Gtk.RadioButton radioDefault;
-		
+
 		private global::Gtk.RadioButton radioCustom;
-		
+
 		private global::Gtk.Table table1;
-		
+
 		private global::Gtk.Button button15;
-		
+
 		private global::Gtk.Entry entryCustomAlias;
-		
+
 		private global::Gtk.Entry entryCustomKeyPass;
-		
+
 		private global::Gtk.Entry entryCustomKeystore;
-		
+
 		private global::Gtk.Entry entryCustomStorePass;
-		
+
 		private global::Gtk.Label label1;
-		
+
 		private global::Gtk.Label label2;
-		
+
 		private global::Gtk.Label label3;
-		
+
 		private global::Gtk.Label label4;
-		
+
 		private global::Gtk.Label GtkLabel5;
-		
+
 		private global::Gtk.Button buttonGenerate;
-		
+
 		private global::Gtk.Frame frame6;
-		
+
 		private global::Gtk.Alignment GtkAlignment4;
-		
+
 		private global::Gtk.HBox hbox2;
-		
+
 		private global::Gtk.Entry entryMd5;
-		
+
 		private global::Gtk.Button buttonCopyMd5;
-		
+
 		private global::Gtk.Label GtkLabel10;
-		
+
 		private global::Gtk.Frame frame4;
-		
+
 		private global::Gtk.Alignment GtkAlignment3;
-		
+
 		private global::Gtk.HBox hbox3;
-		
+
 		private global::Gtk.Entry entrySha1;
-		
+
 		private global::Gtk.Button buttonCopySha1;
-		
+
 		private global::Gtk.Label GtkLabel9;
-		
+
+		private global::Gtk.Frame frame5;
+
+		private global::Gtk.Alignment GtkAlignment5;
+
+		private global::Gtk.HBox hbox5;
+
+		private global::Gtk.Entry entryFacebookSHA1;
+
+		private global::Gtk.Button buttonCopyFacebookSHA1;
+
+		private global::Gtk.Label GtkLabel14;
+
+		private global::Gtk.Frame frame1;
+
+		private global::Gtk.Alignment GtkAlignment;
+
+		private global::Gtk.HBox hbox4;
+
+		private global::Gtk.Entry entrySha256;
+
+		private global::Gtk.Button buttonCopySha256;
+
+		private global::Gtk.Label GtkLabel12;
+
 		private global::Gtk.Button buttonCancel;
 
-		protected virtual void Build ()
+		protected virtual void Build()
 		{
-			global::Stetic.Gui.Initialize (this);
+			global::Stetic.Gui.Initialize(this);
 			// Widget AndroidSigToolAddin.Dialogs.SignatureToolDialog
 			this.WidthRequest = 700;
 			this.Name = "AndroidSigToolAddin.Dialogs.SignatureToolDialog";
-			this.Title = global::Mono.Unix.Catalog.GetString ("Android Signature Tool");
+			this.Title = global::Mono.Unix.Catalog.GetString("Android Signature Tool");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Modal = true;
 			this.Resizable = false;
@@ -91,340 +127,479 @@ namespace AndroidSigToolAddin.Dialogs
 			global::Gtk.VBox w1 = this.VBox;
 			w1.Name = "dialog1_VBox";
 			// Container child dialog1_VBox.Gtk.Box+BoxChild
-			this.frame2 = new global::Gtk.Frame ();
+			this.frame2 = new global::Gtk.Frame();
 			this.frame2.Name = "frame2";
 			this.frame2.ShadowType = ((global::Gtk.ShadowType)(0));
 			// Container child frame2.Gtk.Container+ContainerChild
-			this.GtkAlignment1 = new global::Gtk.Alignment (0F, 0F, 1F, 1F);
+			this.GtkAlignment1 = new global::Gtk.Alignment(0F, 0F, 1F, 1F);
 			this.GtkAlignment1.Name = "GtkAlignment1";
 			this.GtkAlignment1.LeftPadding = ((uint)(12));
 			// Container child GtkAlignment1.Gtk.Container+ContainerChild
-			this.hbox1 = new global::Gtk.HBox ();
+			this.hbox1 = new global::Gtk.HBox();
 			this.hbox1.Name = "hbox1";
 			this.hbox1.Spacing = 6;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.entryKeytool = new global::Gtk.Entry ();
+			this.entryKeytool = new global::Gtk.Entry();
 			this.entryKeytool.CanFocus = true;
 			this.entryKeytool.Name = "entryKeytool";
 			this.entryKeytool.IsEditable = true;
 			this.entryKeytool.InvisibleChar = '●';
-			this.hbox1.Add (this.entryKeytool);
-			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.entryKeytool]));
+			this.hbox1.Add(this.entryKeytool);
+			global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.entryKeytool]));
 			w2.Position = 0;
 			// Container child hbox1.Gtk.Box+BoxChild
-			this.buttonBrowseKeytool = new global::Gtk.Button ();
+			this.buttonBrowseKeytool = new global::Gtk.Button();
 			this.buttonBrowseKeytool.CanFocus = true;
 			this.buttonBrowseKeytool.Name = "buttonBrowseKeytool";
 			this.buttonBrowseKeytool.UseUnderline = true;
-			this.buttonBrowseKeytool.Label = global::Mono.Unix.Catalog.GetString ("...");
-			this.hbox1.Add (this.buttonBrowseKeytool);
-			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.buttonBrowseKeytool]));
+			this.buttonBrowseKeytool.Label = global::Mono.Unix.Catalog.GetString("...");
+			this.hbox1.Add(this.buttonBrowseKeytool);
+			global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.hbox1[this.buttonBrowseKeytool]));
 			w3.Position = 1;
 			w3.Expand = false;
 			w3.Fill = false;
-			this.GtkAlignment1.Add (this.hbox1);
-			this.frame2.Add (this.GtkAlignment1);
-			this.GtkLabel2 = new global::Gtk.Label ();
+			this.GtkAlignment1.Add(this.hbox1);
+			this.frame2.Add(this.GtkAlignment1);
+			this.GtkLabel2 = new global::Gtk.Label();
 			this.GtkLabel2.Name = "GtkLabel2";
-			this.GtkLabel2.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Locate Java keytool</b>");
+			this.GtkLabel2.LabelProp = global::Mono.Unix.Catalog.GetString("<b>Locate Java keytool</b>");
 			this.GtkLabel2.UseMarkup = true;
 			this.frame2.LabelWidget = this.GtkLabel2;
-			w1.Add (this.frame2);
-			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(w1 [this.frame2]));
+			w1.Add(this.frame2);
+			global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(w1[this.frame2]));
 			w6.Position = 0;
 			w6.Expand = false;
 			w6.Fill = false;
 			// Container child dialog1_VBox.Gtk.Box+BoxChild
-			this.frame3 = new global::Gtk.Frame ();
+			this.frame7 = new global::Gtk.Frame();
+			this.frame7.Name = "frame7";
+			this.frame7.ShadowType = ((global::Gtk.ShadowType)(0));
+			// Container child frame7.Gtk.Container+ContainerChild
+			this.GtkAlignment6 = new global::Gtk.Alignment(0F, 0F, 1F, 1F);
+			this.GtkAlignment6.Name = "GtkAlignment6";
+			this.GtkAlignment6.LeftPadding = ((uint)(12));
+			// Container child GtkAlignment6.Gtk.Container+ContainerChild
+			this.hbox6 = new global::Gtk.HBox();
+			this.hbox6.Name = "hbox6";
+			this.hbox6.Spacing = 6;
+			// Container child hbox6.Gtk.Box+BoxChild
+			this.entryOpenssl = new global::Gtk.Entry();
+			this.entryOpenssl.CanFocus = true;
+			this.entryOpenssl.Name = "entryOpenssl";
+			this.entryOpenssl.IsEditable = true;
+			this.entryOpenssl.InvisibleChar = '●';
+			this.hbox6.Add(this.entryOpenssl);
+			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox6[this.entryOpenssl]));
+			w7.Position = 0;
+			// Container child hbox6.Gtk.Box+BoxChild
+			this.buttonBrowseOpenSsl = new global::Gtk.Button();
+			this.buttonBrowseOpenSsl.CanFocus = true;
+			this.buttonBrowseOpenSsl.Name = "buttonBrowseOpenSsl";
+			this.buttonBrowseOpenSsl.UseUnderline = true;
+			this.buttonBrowseOpenSsl.Label = global::Mono.Unix.Catalog.GetString("...");
+			this.hbox6.Add(this.buttonBrowseOpenSsl);
+			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.hbox6[this.buttonBrowseOpenSsl]));
+			w8.Position = 1;
+			w8.Expand = false;
+			w8.Fill = false;
+			this.GtkAlignment6.Add(this.hbox6);
+			this.frame7.Add(this.GtkAlignment6);
+			this.GtkLabel16 = new global::Gtk.Label();
+			this.GtkLabel16.Name = "GtkLabel16";
+			this.GtkLabel16.LabelProp = global::Mono.Unix.Catalog.GetString("<b>Locate openssl</b>");
+			this.GtkLabel16.UseMarkup = true;
+			this.frame7.LabelWidget = this.GtkLabel16;
+			w1.Add(this.frame7);
+			global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(w1[this.frame7]));
+			w11.Position = 1;
+			w11.Expand = false;
+			w11.Fill = false;
+			// Container child dialog1_VBox.Gtk.Box+BoxChild
+			this.frame3 = new global::Gtk.Frame();
 			this.frame3.Name = "frame3";
 			this.frame3.ShadowType = ((global::Gtk.ShadowType)(0));
 			// Container child frame3.Gtk.Container+ContainerChild
-			this.GtkAlignment2 = new global::Gtk.Alignment (0F, 0F, 1F, 1F);
+			this.GtkAlignment2 = new global::Gtk.Alignment(0F, 0F, 1F, 1F);
 			this.GtkAlignment2.Name = "GtkAlignment2";
 			this.GtkAlignment2.LeftPadding = ((uint)(12));
 			// Container child GtkAlignment2.Gtk.Container+ContainerChild
-			this.vbox2 = new global::Gtk.VBox ();
+			this.vbox2 = new global::Gtk.VBox();
 			this.vbox2.Name = "vbox2";
 			this.vbox2.Spacing = 6;
 			// Container child vbox2.Gtk.Box+BoxChild
-			this.radioDefault = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Default Xamarin.Android generated debug.keystore"));
+			this.radioDefault = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Default Xamarin.Android generated debug.keystore"));
 			this.radioDefault.CanFocus = true;
 			this.radioDefault.Name = "radioDefault";
 			this.radioDefault.DrawIndicator = true;
 			this.radioDefault.UseUnderline = true;
-			this.radioDefault.Group = new global::GLib.SList (global::System.IntPtr.Zero);
-			this.vbox2.Add (this.radioDefault);
-			global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.radioDefault]));
-			w7.Position = 0;
-			w7.Expand = false;
-			w7.Fill = false;
+			this.radioDefault.Group = new global::GLib.SList(global::System.IntPtr.Zero);
+			this.vbox2.Add(this.radioDefault);
+			global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.radioDefault]));
+			w12.Position = 0;
+			w12.Expand = false;
+			w12.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
-			this.radioCustom = new global::Gtk.RadioButton (global::Mono.Unix.Catalog.GetString ("Choose your own custom created .keystore file"));
+			this.radioCustom = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Choose your own custom created .keystore file"));
 			this.radioCustom.CanFocus = true;
 			this.radioCustom.Name = "radioCustom";
 			this.radioCustom.DrawIndicator = true;
 			this.radioCustom.UseUnderline = true;
 			this.radioCustom.Group = this.radioDefault.Group;
-			this.vbox2.Add (this.radioCustom);
-			global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.radioCustom]));
-			w8.Position = 1;
-			w8.Expand = false;
-			w8.Fill = false;
+			this.vbox2.Add(this.radioCustom);
+			global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.radioCustom]));
+			w13.Position = 1;
+			w13.Expand = false;
+			w13.Fill = false;
 			// Container child vbox2.Gtk.Box+BoxChild
-			this.table1 = new global::Gtk.Table (((uint)(4)), ((uint)(3)), false);
+			this.table1 = new global::Gtk.Table(((uint)(4)), ((uint)(3)), false);
 			this.table1.Name = "table1";
 			this.table1.RowSpacing = ((uint)(6));
 			this.table1.ColumnSpacing = ((uint)(6));
 			// Container child table1.Gtk.Table+TableChild
-			this.button15 = new global::Gtk.Button ();
+			this.button15 = new global::Gtk.Button();
 			this.button15.CanFocus = true;
 			this.button15.Name = "button15";
 			this.button15.UseUnderline = true;
-			this.button15.Label = global::Mono.Unix.Catalog.GetString ("...");
-			this.table1.Add (this.button15);
-			global::Gtk.Table.TableChild w9 = ((global::Gtk.Table.TableChild)(this.table1 [this.button15]));
-			w9.LeftAttach = ((uint)(2));
-			w9.RightAttach = ((uint)(3));
-			w9.XOptions = ((global::Gtk.AttachOptions)(4));
-			w9.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.button15.Label = global::Mono.Unix.Catalog.GetString("...");
+			this.table1.Add(this.button15);
+			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.table1[this.button15]));
+			w14.LeftAttach = ((uint)(2));
+			w14.RightAttach = ((uint)(3));
+			w14.XOptions = ((global::Gtk.AttachOptions)(4));
+			w14.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.entryCustomAlias = new global::Gtk.Entry ();
+			this.entryCustomAlias = new global::Gtk.Entry();
 			this.entryCustomAlias.CanFocus = true;
 			this.entryCustomAlias.Name = "entryCustomAlias";
 			this.entryCustomAlias.IsEditable = true;
 			this.entryCustomAlias.InvisibleChar = '●';
-			this.table1.Add (this.entryCustomAlias);
-			global::Gtk.Table.TableChild w10 = ((global::Gtk.Table.TableChild)(this.table1 [this.entryCustomAlias]));
-			w10.TopAttach = ((uint)(1));
-			w10.BottomAttach = ((uint)(2));
-			w10.LeftAttach = ((uint)(1));
-			w10.RightAttach = ((uint)(2));
-			w10.XOptions = ((global::Gtk.AttachOptions)(4));
-			w10.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.table1.Add(this.entryCustomAlias);
+			global::Gtk.Table.TableChild w15 = ((global::Gtk.Table.TableChild)(this.table1[this.entryCustomAlias]));
+			w15.TopAttach = ((uint)(1));
+			w15.BottomAttach = ((uint)(2));
+			w15.LeftAttach = ((uint)(1));
+			w15.RightAttach = ((uint)(2));
+			w15.XOptions = ((global::Gtk.AttachOptions)(4));
+			w15.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.entryCustomKeyPass = new global::Gtk.Entry ();
+			this.entryCustomKeyPass = new global::Gtk.Entry();
 			this.entryCustomKeyPass.CanFocus = true;
 			this.entryCustomKeyPass.Name = "entryCustomKeyPass";
 			this.entryCustomKeyPass.IsEditable = true;
 			this.entryCustomKeyPass.InvisibleChar = '●';
-			this.table1.Add (this.entryCustomKeyPass);
-			global::Gtk.Table.TableChild w11 = ((global::Gtk.Table.TableChild)(this.table1 [this.entryCustomKeyPass]));
-			w11.TopAttach = ((uint)(3));
-			w11.BottomAttach = ((uint)(4));
-			w11.LeftAttach = ((uint)(1));
-			w11.RightAttach = ((uint)(2));
-			w11.XOptions = ((global::Gtk.AttachOptions)(4));
-			w11.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.table1.Add(this.entryCustomKeyPass);
+			global::Gtk.Table.TableChild w16 = ((global::Gtk.Table.TableChild)(this.table1[this.entryCustomKeyPass]));
+			w16.TopAttach = ((uint)(3));
+			w16.BottomAttach = ((uint)(4));
+			w16.LeftAttach = ((uint)(1));
+			w16.RightAttach = ((uint)(2));
+			w16.XOptions = ((global::Gtk.AttachOptions)(4));
+			w16.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.entryCustomKeystore = new global::Gtk.Entry ();
+			this.entryCustomKeystore = new global::Gtk.Entry();
 			this.entryCustomKeystore.CanFocus = true;
 			this.entryCustomKeystore.Name = "entryCustomKeystore";
 			this.entryCustomKeystore.IsEditable = true;
 			this.entryCustomKeystore.InvisibleChar = '●';
-			this.table1.Add (this.entryCustomKeystore);
-			global::Gtk.Table.TableChild w12 = ((global::Gtk.Table.TableChild)(this.table1 [this.entryCustomKeystore]));
-			w12.LeftAttach = ((uint)(1));
-			w12.RightAttach = ((uint)(2));
-			w12.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.table1.Add(this.entryCustomKeystore);
+			global::Gtk.Table.TableChild w17 = ((global::Gtk.Table.TableChild)(this.table1[this.entryCustomKeystore]));
+			w17.LeftAttach = ((uint)(1));
+			w17.RightAttach = ((uint)(2));
+			w17.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.entryCustomStorePass = new global::Gtk.Entry ();
+			this.entryCustomStorePass = new global::Gtk.Entry();
 			this.entryCustomStorePass.CanFocus = true;
 			this.entryCustomStorePass.Name = "entryCustomStorePass";
 			this.entryCustomStorePass.IsEditable = true;
 			this.entryCustomStorePass.InvisibleChar = '●';
-			this.table1.Add (this.entryCustomStorePass);
-			global::Gtk.Table.TableChild w13 = ((global::Gtk.Table.TableChild)(this.table1 [this.entryCustomStorePass]));
-			w13.TopAttach = ((uint)(2));
-			w13.BottomAttach = ((uint)(3));
-			w13.LeftAttach = ((uint)(1));
-			w13.RightAttach = ((uint)(2));
-			w13.XOptions = ((global::Gtk.AttachOptions)(4));
-			w13.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.table1.Add(this.entryCustomStorePass);
+			global::Gtk.Table.TableChild w18 = ((global::Gtk.Table.TableChild)(this.table1[this.entryCustomStorePass]));
+			w18.TopAttach = ((uint)(2));
+			w18.BottomAttach = ((uint)(3));
+			w18.LeftAttach = ((uint)(1));
+			w18.RightAttach = ((uint)(2));
+			w18.XOptions = ((global::Gtk.AttachOptions)(4));
+			w18.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.label1 = new global::Gtk.Label ();
+			this.label1 = new global::Gtk.Label();
 			this.label1.Name = "label1";
-			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString ("Keystore File:");
-			this.table1.Add (this.label1);
-			global::Gtk.Table.TableChild w14 = ((global::Gtk.Table.TableChild)(this.table1 [this.label1]));
-			w14.XOptions = ((global::Gtk.AttachOptions)(4));
-			w14.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.label1.LabelProp = global::Mono.Unix.Catalog.GetString("Keystore File:");
+			this.table1.Add(this.label1);
+			global::Gtk.Table.TableChild w19 = ((global::Gtk.Table.TableChild)(this.table1[this.label1]));
+			w19.XOptions = ((global::Gtk.AttachOptions)(4));
+			w19.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.label2 = new global::Gtk.Label ();
+			this.label2 = new global::Gtk.Label();
 			this.label2.Name = "label2";
-			this.label2.LabelProp = global::Mono.Unix.Catalog.GetString ("Alias:");
-			this.table1.Add (this.label2);
-			global::Gtk.Table.TableChild w15 = ((global::Gtk.Table.TableChild)(this.table1 [this.label2]));
-			w15.TopAttach = ((uint)(1));
-			w15.BottomAttach = ((uint)(2));
-			w15.XOptions = ((global::Gtk.AttachOptions)(4));
-			w15.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.label2.LabelProp = global::Mono.Unix.Catalog.GetString("Alias:");
+			this.table1.Add(this.label2);
+			global::Gtk.Table.TableChild w20 = ((global::Gtk.Table.TableChild)(this.table1[this.label2]));
+			w20.TopAttach = ((uint)(1));
+			w20.BottomAttach = ((uint)(2));
+			w20.XOptions = ((global::Gtk.AttachOptions)(4));
+			w20.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.label3 = new global::Gtk.Label ();
+			this.label3 = new global::Gtk.Label();
 			this.label3.Name = "label3";
-			this.label3.LabelProp = global::Mono.Unix.Catalog.GetString ("Store Password:");
-			this.table1.Add (this.label3);
-			global::Gtk.Table.TableChild w16 = ((global::Gtk.Table.TableChild)(this.table1 [this.label3]));
-			w16.TopAttach = ((uint)(2));
-			w16.BottomAttach = ((uint)(3));
-			w16.XOptions = ((global::Gtk.AttachOptions)(4));
-			w16.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.label3.LabelProp = global::Mono.Unix.Catalog.GetString("Store Password:");
+			this.table1.Add(this.label3);
+			global::Gtk.Table.TableChild w21 = ((global::Gtk.Table.TableChild)(this.table1[this.label3]));
+			w21.TopAttach = ((uint)(2));
+			w21.BottomAttach = ((uint)(3));
+			w21.XOptions = ((global::Gtk.AttachOptions)(4));
+			w21.YOptions = ((global::Gtk.AttachOptions)(4));
 			// Container child table1.Gtk.Table+TableChild
-			this.label4 = new global::Gtk.Label ();
+			this.label4 = new global::Gtk.Label();
 			this.label4.Name = "label4";
-			this.label4.LabelProp = global::Mono.Unix.Catalog.GetString ("Key Password:");
-			this.table1.Add (this.label4);
-			global::Gtk.Table.TableChild w17 = ((global::Gtk.Table.TableChild)(this.table1 [this.label4]));
-			w17.TopAttach = ((uint)(3));
-			w17.BottomAttach = ((uint)(4));
-			w17.XOptions = ((global::Gtk.AttachOptions)(4));
-			w17.YOptions = ((global::Gtk.AttachOptions)(4));
-			this.vbox2.Add (this.table1);
-			global::Gtk.Box.BoxChild w18 = ((global::Gtk.Box.BoxChild)(this.vbox2 [this.table1]));
-			w18.Position = 2;
-			w18.Expand = false;
-			w18.Fill = false;
-			this.GtkAlignment2.Add (this.vbox2);
-			this.frame3.Add (this.GtkAlignment2);
-			this.GtkLabel5 = new global::Gtk.Label ();
+			this.label4.LabelProp = global::Mono.Unix.Catalog.GetString("Key Password:");
+			this.table1.Add(this.label4);
+			global::Gtk.Table.TableChild w22 = ((global::Gtk.Table.TableChild)(this.table1[this.label4]));
+			w22.TopAttach = ((uint)(3));
+			w22.BottomAttach = ((uint)(4));
+			w22.XOptions = ((global::Gtk.AttachOptions)(4));
+			w22.YOptions = ((global::Gtk.AttachOptions)(4));
+			this.vbox2.Add(this.table1);
+			global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.vbox2[this.table1]));
+			w23.Position = 2;
+			w23.Expand = false;
+			w23.Fill = false;
+			this.GtkAlignment2.Add(this.vbox2);
+			this.frame3.Add(this.GtkAlignment2);
+			this.GtkLabel5 = new global::Gtk.Label();
 			this.GtkLabel5.Name = "GtkLabel5";
-			this.GtkLabel5.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Choose your keystore to generate signatures from</b>");
+			this.GtkLabel5.LabelProp = global::Mono.Unix.Catalog.GetString("<b>Choose your keystore to generate signatures from</b>");
 			this.GtkLabel5.UseMarkup = true;
 			this.frame3.LabelWidget = this.GtkLabel5;
-			w1.Add (this.frame3);
-			global::Gtk.Box.BoxChild w21 = ((global::Gtk.Box.BoxChild)(w1 [this.frame3]));
-			w21.Position = 1;
-			w21.Expand = false;
-			w21.Fill = false;
+			w1.Add(this.frame3);
+			global::Gtk.Box.BoxChild w26 = ((global::Gtk.Box.BoxChild)(w1[this.frame3]));
+			w26.Position = 2;
+			w26.Expand = false;
+			w26.Fill = false;
+			w26.Padding = ((uint)(10));
 			// Container child dialog1_VBox.Gtk.Box+BoxChild
-			this.buttonGenerate = new global::Gtk.Button ();
+			this.buttonGenerate = new global::Gtk.Button();
 			this.buttonGenerate.WidthRequest = 100;
 			this.buttonGenerate.CanFocus = true;
 			this.buttonGenerate.Name = "buttonGenerate";
 			this.buttonGenerate.UseUnderline = true;
-			this.buttonGenerate.Label = global::Mono.Unix.Catalog.GetString ("Generate Signatures");
-			w1.Add (this.buttonGenerate);
-			global::Gtk.Box.BoxChild w22 = ((global::Gtk.Box.BoxChild)(w1 [this.buttonGenerate]));
-			w22.Position = 2;
-			w22.Expand = false;
-			w22.Fill = false;
-			w22.Padding = ((uint)(5));
+			this.buttonGenerate.Label = global::Mono.Unix.Catalog.GetString("Generate Signatures");
+			w1.Add(this.buttonGenerate);
+			global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(w1[this.buttonGenerate]));
+			w27.Position = 3;
+			w27.Expand = false;
+			w27.Fill = false;
+			w27.Padding = ((uint)(10));
 			// Container child dialog1_VBox.Gtk.Box+BoxChild
-			this.frame6 = new global::Gtk.Frame ();
+			this.frame6 = new global::Gtk.Frame();
 			this.frame6.Name = "frame6";
 			this.frame6.ShadowType = ((global::Gtk.ShadowType)(0));
 			// Container child frame6.Gtk.Container+ContainerChild
-			this.GtkAlignment4 = new global::Gtk.Alignment (0F, 0F, 1F, 1F);
+			this.GtkAlignment4 = new global::Gtk.Alignment(0F, 0F, 1F, 1F);
 			this.GtkAlignment4.Name = "GtkAlignment4";
 			this.GtkAlignment4.LeftPadding = ((uint)(12));
 			// Container child GtkAlignment4.Gtk.Container+ContainerChild
-			this.hbox2 = new global::Gtk.HBox ();
+			this.hbox2 = new global::Gtk.HBox();
 			this.hbox2.Name = "hbox2";
 			this.hbox2.Spacing = 6;
 			// Container child hbox2.Gtk.Box+BoxChild
-			this.entryMd5 = new global::Gtk.Entry ();
+			this.entryMd5 = new global::Gtk.Entry();
 			this.entryMd5.CanFocus = true;
 			this.entryMd5.Name = "entryMd5";
 			this.entryMd5.IsEditable = false;
 			this.entryMd5.InvisibleChar = '●';
-			this.hbox2.Add (this.entryMd5);
-			global::Gtk.Box.BoxChild w23 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.entryMd5]));
-			w23.Position = 0;
+			this.hbox2.Add(this.entryMd5);
+			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.entryMd5]));
+			w28.Position = 0;
 			// Container child hbox2.Gtk.Box+BoxChild
-			this.buttonCopyMd5 = new global::Gtk.Button ();
+			this.buttonCopyMd5 = new global::Gtk.Button();
 			this.buttonCopyMd5.CanFocus = true;
 			this.buttonCopyMd5.Name = "buttonCopyMd5";
 			this.buttonCopyMd5.UseUnderline = true;
-			this.buttonCopyMd5.Label = global::Mono.Unix.Catalog.GetString ("Copy");
-			this.hbox2.Add (this.buttonCopyMd5);
-			global::Gtk.Box.BoxChild w24 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.buttonCopyMd5]));
-			w24.Position = 1;
-			w24.Expand = false;
-			w24.Fill = false;
-			this.GtkAlignment4.Add (this.hbox2);
-			this.frame6.Add (this.GtkAlignment4);
-			this.GtkLabel10 = new global::Gtk.Label ();
+			this.buttonCopyMd5.Label = global::Mono.Unix.Catalog.GetString("Copy");
+			this.hbox2.Add(this.buttonCopyMd5);
+			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox2[this.buttonCopyMd5]));
+			w29.Position = 1;
+			w29.Expand = false;
+			w29.Fill = false;
+			this.GtkAlignment4.Add(this.hbox2);
+			this.frame6.Add(this.GtkAlignment4);
+			this.GtkLabel10 = new global::Gtk.Label();
 			this.GtkLabel10.Name = "GtkLabel10";
-			this.GtkLabel10.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>MD5 Signature</b>");
+			this.GtkLabel10.LabelProp = global::Mono.Unix.Catalog.GetString("<b>MD5 Signature</b>");
 			this.GtkLabel10.UseMarkup = true;
 			this.frame6.LabelWidget = this.GtkLabel10;
-			w1.Add (this.frame6);
-			global::Gtk.Box.BoxChild w27 = ((global::Gtk.Box.BoxChild)(w1 [this.frame6]));
-			w27.Position = 3;
-			w27.Expand = false;
-			w27.Fill = false;
+			w1.Add(this.frame6);
+			global::Gtk.Box.BoxChild w32 = ((global::Gtk.Box.BoxChild)(w1[this.frame6]));
+			w32.Position = 4;
+			w32.Expand = false;
+			w32.Fill = false;
 			// Container child dialog1_VBox.Gtk.Box+BoxChild
-			this.frame4 = new global::Gtk.Frame ();
+			this.frame4 = new global::Gtk.Frame();
 			this.frame4.Name = "frame4";
 			this.frame4.ShadowType = ((global::Gtk.ShadowType)(0));
 			// Container child frame4.Gtk.Container+ContainerChild
-			this.GtkAlignment3 = new global::Gtk.Alignment (0F, 0F, 1F, 1F);
+			this.GtkAlignment3 = new global::Gtk.Alignment(0F, 0F, 1F, 1F);
 			this.GtkAlignment3.Name = "GtkAlignment3";
 			this.GtkAlignment3.LeftPadding = ((uint)(12));
 			// Container child GtkAlignment3.Gtk.Container+ContainerChild
-			this.hbox3 = new global::Gtk.HBox ();
+			this.hbox3 = new global::Gtk.HBox();
 			this.hbox3.Name = "hbox3";
 			this.hbox3.Spacing = 6;
 			// Container child hbox3.Gtk.Box+BoxChild
-			this.entrySha1 = new global::Gtk.Entry ();
+			this.entrySha1 = new global::Gtk.Entry();
 			this.entrySha1.CanFocus = true;
 			this.entrySha1.Name = "entrySha1";
 			this.entrySha1.IsEditable = false;
 			this.entrySha1.InvisibleChar = '●';
-			this.hbox3.Add (this.entrySha1);
-			global::Gtk.Box.BoxChild w28 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.entrySha1]));
-			w28.Position = 0;
+			this.hbox3.Add(this.entrySha1);
+			global::Gtk.Box.BoxChild w33 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.entrySha1]));
+			w33.Position = 0;
 			// Container child hbox3.Gtk.Box+BoxChild
-			this.buttonCopySha1 = new global::Gtk.Button ();
+			this.buttonCopySha1 = new global::Gtk.Button();
 			this.buttonCopySha1.CanFocus = true;
 			this.buttonCopySha1.Name = "buttonCopySha1";
 			this.buttonCopySha1.UseUnderline = true;
-			this.buttonCopySha1.Label = global::Mono.Unix.Catalog.GetString ("Copy");
-			this.hbox3.Add (this.buttonCopySha1);
-			global::Gtk.Box.BoxChild w29 = ((global::Gtk.Box.BoxChild)(this.hbox3 [this.buttonCopySha1]));
-			w29.Position = 1;
-			w29.Expand = false;
-			w29.Fill = false;
-			this.GtkAlignment3.Add (this.hbox3);
-			this.frame4.Add (this.GtkAlignment3);
-			this.GtkLabel9 = new global::Gtk.Label ();
+			this.buttonCopySha1.Label = global::Mono.Unix.Catalog.GetString("Copy");
+			this.hbox3.Add(this.buttonCopySha1);
+			global::Gtk.Box.BoxChild w34 = ((global::Gtk.Box.BoxChild)(this.hbox3[this.buttonCopySha1]));
+			w34.Position = 1;
+			w34.Expand = false;
+			w34.Fill = false;
+			this.GtkAlignment3.Add(this.hbox3);
+			this.frame4.Add(this.GtkAlignment3);
+			this.GtkLabel9 = new global::Gtk.Label();
 			this.GtkLabel9.Name = "GtkLabel9";
-			this.GtkLabel9.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>SHA1 Signature</b>");
+			this.GtkLabel9.LabelProp = global::Mono.Unix.Catalog.GetString("<b>SHA1 Signature</b>");
 			this.GtkLabel9.UseMarkup = true;
 			this.frame4.LabelWidget = this.GtkLabel9;
-			w1.Add (this.frame4);
-			global::Gtk.Box.BoxChild w32 = ((global::Gtk.Box.BoxChild)(w1 [this.frame4]));
-			w32.Position = 4;
-			w32.Expand = false;
-			w32.Fill = false;
+			w1.Add(this.frame4);
+			global::Gtk.Box.BoxChild w37 = ((global::Gtk.Box.BoxChild)(w1[this.frame4]));
+			w37.Position = 5;
+			w37.Expand = false;
+			w37.Fill = false;
+			// Container child dialog1_VBox.Gtk.Box+BoxChild
+			this.frame5 = new global::Gtk.Frame();
+			this.frame5.Name = "frame5";
+			this.frame5.ShadowType = ((global::Gtk.ShadowType)(0));
+			// Container child frame5.Gtk.Container+ContainerChild
+			this.GtkAlignment5 = new global::Gtk.Alignment(0F, 0F, 1F, 1F);
+			this.GtkAlignment5.Name = "GtkAlignment5";
+			this.GtkAlignment5.LeftPadding = ((uint)(12));
+			// Container child GtkAlignment5.Gtk.Container+ContainerChild
+			this.hbox5 = new global::Gtk.HBox();
+			this.hbox5.Name = "hbox5";
+			this.hbox5.Spacing = 6;
+			// Container child hbox5.Gtk.Box+BoxChild
+			this.entryFacebookSHA1 = new global::Gtk.Entry();
+			this.entryFacebookSHA1.CanFocus = true;
+			this.entryFacebookSHA1.Name = "entryFacebookSHA1";
+			this.entryFacebookSHA1.IsEditable = false;
+			this.entryFacebookSHA1.InvisibleChar = '●';
+			this.hbox5.Add(this.entryFacebookSHA1);
+			global::Gtk.Box.BoxChild w38 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.entryFacebookSHA1]));
+			w38.Position = 0;
+			// Container child hbox5.Gtk.Box+BoxChild
+			this.buttonCopyFacebookSHA1 = new global::Gtk.Button();
+			this.buttonCopyFacebookSHA1.CanFocus = true;
+			this.buttonCopyFacebookSHA1.Name = "buttonCopyFacebookSHA1";
+			this.buttonCopyFacebookSHA1.UseUnderline = true;
+			this.buttonCopyFacebookSHA1.Label = global::Mono.Unix.Catalog.GetString("Copy");
+			this.hbox5.Add(this.buttonCopyFacebookSHA1);
+			global::Gtk.Box.BoxChild w39 = ((global::Gtk.Box.BoxChild)(this.hbox5[this.buttonCopyFacebookSHA1]));
+			w39.Position = 1;
+			w39.Expand = false;
+			w39.Fill = false;
+			this.GtkAlignment5.Add(this.hbox5);
+			this.frame5.Add(this.GtkAlignment5);
+			this.GtkLabel14 = new global::Gtk.Label();
+			this.GtkLabel14.Name = "GtkLabel14";
+			this.GtkLabel14.LabelProp = global::Mono.Unix.Catalog.GetString("<b>Facebook SHA1 Signature</b>");
+			this.GtkLabel14.UseMarkup = true;
+			this.frame5.LabelWidget = this.GtkLabel14;
+			w1.Add(this.frame5);
+			global::Gtk.Box.BoxChild w42 = ((global::Gtk.Box.BoxChild)(w1[this.frame5]));
+			w42.PackType = ((global::Gtk.PackType)(1));
+			w42.Position = 7;
+			w42.Expand = false;
+			w42.Fill = false;
+			// Container child dialog1_VBox.Gtk.Box+BoxChild
+			this.frame1 = new global::Gtk.Frame();
+			this.frame1.Name = "frame1";
+			this.frame1.ShadowType = ((global::Gtk.ShadowType)(0));
+			// Container child frame1.Gtk.Container+ContainerChild
+			this.GtkAlignment = new global::Gtk.Alignment(0F, 0F, 1F, 1F);
+			this.GtkAlignment.Name = "GtkAlignment";
+			this.GtkAlignment.LeftPadding = ((uint)(12));
+			// Container child GtkAlignment.Gtk.Container+ContainerChild
+			this.hbox4 = new global::Gtk.HBox();
+			this.hbox4.Name = "hbox4";
+			this.hbox4.Spacing = 6;
+			// Container child hbox4.Gtk.Box+BoxChild
+			this.entrySha256 = new global::Gtk.Entry();
+			this.entrySha256.CanFocus = true;
+			this.entrySha256.Name = "entrySha256";
+			this.entrySha256.IsEditable = false;
+			this.entrySha256.InvisibleChar = '●';
+			this.hbox4.Add(this.entrySha256);
+			global::Gtk.Box.BoxChild w43 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.entrySha256]));
+			w43.Position = 0;
+			// Container child hbox4.Gtk.Box+BoxChild
+			this.buttonCopySha256 = new global::Gtk.Button();
+			this.buttonCopySha256.CanFocus = true;
+			this.buttonCopySha256.Name = "buttonCopySha256";
+			this.buttonCopySha256.UseUnderline = true;
+			this.buttonCopySha256.Label = global::Mono.Unix.Catalog.GetString("Copy");
+			this.hbox4.Add(this.buttonCopySha256);
+			global::Gtk.Box.BoxChild w44 = ((global::Gtk.Box.BoxChild)(this.hbox4[this.buttonCopySha256]));
+			w44.Position = 1;
+			w44.Expand = false;
+			w44.Fill = false;
+			this.GtkAlignment.Add(this.hbox4);
+			this.frame1.Add(this.GtkAlignment);
+			this.GtkLabel12 = new global::Gtk.Label();
+			this.GtkLabel12.Name = "GtkLabel12";
+			this.GtkLabel12.LabelProp = global::Mono.Unix.Catalog.GetString("<b>SHA256 Signature</b>");
+			this.GtkLabel12.UseMarkup = true;
+			this.frame1.LabelWidget = this.GtkLabel12;
+			w1.Add(this.frame1);
+			global::Gtk.Box.BoxChild w47 = ((global::Gtk.Box.BoxChild)(w1[this.frame1]));
+			w47.PackType = ((global::Gtk.PackType)(1));
+			w47.Position = 8;
+			w47.Expand = false;
+			w47.Fill = false;
 			// Internal child AndroidSigToolAddin.Dialogs.SignatureToolDialog.ActionArea
-			global::Gtk.HButtonBox w33 = this.ActionArea;
-			w33.Name = "dialog1_ActionArea";
-			w33.Spacing = 10;
-			w33.BorderWidth = ((uint)(5));
-			w33.LayoutStyle = ((global::Gtk.ButtonBoxStyle)(4));
+			global::Gtk.HButtonBox w48 = this.ActionArea;
+			w48.Name = "dialog1_ActionArea";
+			w48.Spacing = 10;
+			w48.BorderWidth = ((uint)(5));
+			w48.LayoutStyle = ((global::Gtk.ButtonBoxStyle)(4));
 			// Container child dialog1_ActionArea.Gtk.ButtonBox+ButtonBoxChild
-			this.buttonCancel = new global::Gtk.Button ();
+			this.buttonCancel = new global::Gtk.Button();
 			this.buttonCancel.CanFocus = true;
 			this.buttonCancel.Name = "buttonCancel";
 			this.buttonCancel.UseUnderline = true;
-			this.buttonCancel.Label = global::Mono.Unix.Catalog.GetString ("Close");
-			this.AddActionWidget (this.buttonCancel, 0);
-			global::Gtk.ButtonBox.ButtonBoxChild w34 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w33 [this.buttonCancel]));
-			w34.Expand = false;
-			w34.Fill = false;
-			if ((this.Child != null)) {
-				this.Child.ShowAll ();
+			this.buttonCancel.Label = global::Mono.Unix.Catalog.GetString("Close");
+			this.AddActionWidget(this.buttonCancel, 0);
+			global::Gtk.ButtonBox.ButtonBoxChild w49 = ((global::Gtk.ButtonBox.ButtonBoxChild)(w48[this.buttonCancel]));
+			w49.Expand = false;
+			w49.Fill = false;
+			if ((this.Child != null))
+			{
+				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 800;
-			this.DefaultHeight = 428;
-			this.Show ();
-			this.buttonBrowseKeytool.Clicked += new global::System.EventHandler (this.buttonBrowseKeytool_Clicked);
-			this.radioDefault.Toggled += new global::System.EventHandler (this.radioDefault_Toggled);
-			this.button15.Clicked += new global::System.EventHandler (this.buttonBrowseKeystore_Clicked);
-			this.buttonGenerate.Clicked += new global::System.EventHandler (this.buttonGenerate_Clicked);
-			this.buttonCopyMd5.Clicked += new global::System.EventHandler (this.buttonMd5Copy_Clicked);
-			this.buttonCopySha1.Clicked += new global::System.EventHandler (this.buttonSha1Copy_Clicked);
-			this.buttonCancel.Clicked += new global::System.EventHandler (this.buttonCancel_Clicked);
+			this.DefaultHeight = 615;
+			this.Show();
+			this.buttonBrowseKeytool.Clicked += new global::System.EventHandler(this.buttonBrowseKeytool_Clicked);
+			this.buttonBrowseOpenSsl.Clicked += new global::System.EventHandler(this.buttonBrowseOpenSsl_Clicked);
+			this.radioDefault.Toggled += new global::System.EventHandler(this.radioDefault_Toggled);
+			this.button15.Clicked += new global::System.EventHandler(this.buttonBrowseKeystore_Clicked);
+			this.buttonGenerate.Clicked += new global::System.EventHandler(this.buttonGenerate_Clicked);
+			this.buttonCopyMd5.Clicked += new global::System.EventHandler(this.buttonMd5Copy_Clicked);
+			this.buttonCopySha1.Clicked += new global::System.EventHandler(this.buttonSha1Copy_Clicked);
+			this.buttonCopySha256.Clicked += new global::System.EventHandler(this.buttonCopySha256_Clicked);
+			this.buttonCopyFacebookSHA1.Clicked += new global::System.EventHandler(this.buttonCopyFacebookSHA1_Clicked);
+			this.buttonCancel.Clicked += new global::System.EventHandler(this.buttonCancel_Clicked);
 		}
 	}
 }

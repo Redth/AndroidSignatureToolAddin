@@ -23,6 +23,7 @@ namespace AndroidSigToolAddin.Dialogs
             FieldEditable ();
 
             entryKeytool.Text = helper.FindKeytool ();
+            entryOpenssl.Text = helper.FindOpenSsl () ?? string.Empty;
 		}
 
         protected void buttonSha1Copy_Clicked (object sender, EventArgs e)
@@ -37,16 +38,35 @@ namespace AndroidSigToolAddin.Dialogs
             clipboard.Text = entryMd5.Text;
         }
 
+        protected void buttonCopySha256_Clicked(System.Object sender, System.EventArgs e)
+        {
+            var clipboard = GetClipboard(Gdk.Selection.Clipboard);
+            clipboard.Text = entrySha256.Text;
+        }
+
+        protected void buttonCopyFacebookSHA1_Clicked(System.Object sender, System.EventArgs e)
+        {
+            var clipboard = GetClipboard(Gdk.Selection.Clipboard);
+            clipboard.Text = entryFacebookSHA1.Text;
+        }
+
         protected void buttonGenerate_Clicked (object sender, EventArgs e)
         {
             SignatureInfo sig = null;
 
-            var keytool = helper.FindKeytool ();
+            var keytool = entryKeytool.Text;
+            if (!System.IO.File.Exists(keytool))
+                keytool = helper.FindKeytool();
 
-            if (string.IsNullOrEmpty (keytool)) {
-                MsgBox ("Unable to locate keytool", "Java Keytool is needed to generate signatures.  We were unable to automatically locate keytool.  Please enter the location manually.");
+            if (string.IsNullOrEmpty(keytool))
+            {
+                MsgBox("Unable to locate keytool", "Java Keytool is needed to generate signatures.  We were unable to automatically locate keytool.  Please enter the location manually.");
                 return;
             }
+
+            var openssl = entryOpenssl.Text;
+            if (!System.IO.File.Exists(openssl))
+                openssl = helper.FindOpenSsl();
 
             if (radioDefault.Active) {
 
@@ -78,6 +98,8 @@ namespace AndroidSigToolAddin.Dialogs
             if (sig != null) {
                 entryMd5.Text = sig.MD5;
                 entrySha1.Text = sig.SHA1;
+                entrySha256.Text = sig.SHA256;
+                entryFacebookSHA1.Text = sig.FacebookSHA1 ?? string.Empty;
             }
         }
 
@@ -88,7 +110,20 @@ namespace AndroidSigToolAddin.Dialogs
 
         protected void buttonBrowseKeytool_Clicked (object sender, EventArgs e)
         {
-            OpenFile ("Locate Java keytool", "keytool", "keytool");
+            var pattern = "keytool.exe";
+            if (PlatformDetection.IsMac || PlatformDetection.IsLinux)
+                pattern = "keytool";
+            
+            OpenFile ("Locate Java keytool", "keytool", pattern);
+        }
+
+        protected void buttonBrowseOpenSsl_Clicked(System.Object sender, System.EventArgs e)
+        {
+            var pattern = "openssl.exe";
+            if (PlatformDetection.IsMac || PlatformDetection.IsLinux)
+                pattern = "openssl";
+            
+            OpenFile("Locate openssl", "openssl", pattern);
         }
 
         protected void buttonCancel_Clicked (object sender, EventArgs e)
@@ -111,7 +146,18 @@ namespace AndroidSigToolAddin.Dialogs
 
             if (fc.Run() == (int)Gtk.ResponseType.Accept) 
             {
-                entryCustomKeystore.Text = fc.Filename;
+                if (filterName == ".keystore")
+                {
+                    entryCustomKeystore.Text = fc.Filename;
+                }
+                else if (filterName == "openssl")
+                {
+                    entryOpenssl.Text = fc.Filename;
+                }
+                else if (filterName == "keytool")
+                {
+                    entryKeytool.Text = fc.Filename;
+                }
             }
             fc.Destroy();
         }
@@ -140,6 +186,6 @@ namespace AndroidSigToolAddin.Dialogs
             entryCustomKeystore.IsEditable = enabled;
             entryCustomStorePass.IsEditable = enabled;             
         }
-	}
+    }
 }
 
