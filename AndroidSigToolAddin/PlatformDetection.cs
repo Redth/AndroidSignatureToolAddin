@@ -5,14 +5,19 @@ namespace AndroidSignatureTool.Core
 {
 	public static class PlatformDetection
 	{
-		public readonly static bool IsWindows;
 		public readonly static bool IsMac;
+        public readonly static bool IsLinux;
 
 		static PlatformDetection ()
 		{
-			IsWindows = Path.DirectorySeparatorChar == '\\';
-			IsMac = !IsWindows && IsRunningOnMac();
+			IsMac = IsRunningOnMac();
+            IsLinux = IsRunningLinux();
 		}
+
+        static bool IsRunningLinux()
+        {
+            return System.Environment.OSVersion.Platform == System.PlatformID.Unix;
+        }
 
 		//From Managed.Windows.Forms/XplatUI
 		static bool IsRunningOnMac ()
