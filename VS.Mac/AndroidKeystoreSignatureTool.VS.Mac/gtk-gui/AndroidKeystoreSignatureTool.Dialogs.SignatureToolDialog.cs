@@ -174,7 +174,6 @@ namespace AndroidKeystoreSignatureTool.Dialogs
 			this.radioDefault = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Default Xamarin.Android generated debug.keystore"));
 			this.radioDefault.CanFocus = true;
 			this.radioDefault.Name = "radioDefault";
-			this.radioDefault.Active = true;
 			this.radioDefault.DrawIndicator = true;
 			this.radioDefault.UseUnderline = true;
 			this.radioDefault.Group = new global::GLib.SList(global::System.IntPtr.Zero);
@@ -533,7 +532,7 @@ namespace AndroidKeystoreSignatureTool.Dialogs
 				this.Child.ShowAll();
 			}
 			this.DefaultWidth = 800;
-			this.DefaultHeight = 621;
+			this.DefaultHeight = 719;
 			this.Show();
 			this.buttonGenerate.Clicked += new global::System.EventHandler(this.buttonGenerate_Clicked);
 			this.buttonCopyMd5.Clicked += new global::System.EventHandler(this.buttonMd5Copy_Clicked);

@@ -116,7 +116,7 @@ namespace AndroidKeystoreSignatureTool.Dialogs
 			if (PlatformDetection.IsMac || PlatformDetection.IsLinux)
 				pattern = "keytool";
 
-			OpenFile("Locate Java keytool", "keytool", pattern);
+			OpenFile("Java keytool Location", "keytool", pattern);
 		}
 
 		protected void buttonCancel_Clicked(object sender, EventArgs e)
