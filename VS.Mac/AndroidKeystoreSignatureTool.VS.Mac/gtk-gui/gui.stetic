@@ -5,9 +5,9 @@
     <target-gtk-version>2.12</target-gtk-version>
   </configuration>
   <import>
-    <widget-library name="../bin/Debug/AndroidSigToolAddin.dll" internal="true" />
+    <widget-library name="../bin/Debug/AndroidKeystoreSignatureTool.VS.Mac.dll" internal="true" />
   </import>
-  <widget class="Gtk.Dialog" id="AndroidSigToolAddin.Dialogs.SignatureToolDialog" design-size="800 615">
+  <widget class="Gtk.Dialog" id="AndroidKeystoreSignatureTool.Dialogs.SignatureToolDialog" design-size="800 621">
     <property name="MemberName" />
     <property name="WidthRequest">700</property>
     <property name="Title" translatable="yes">Android Signature Tool</property>
@@ -53,7 +53,6 @@
                         <property name="Type">TextOnly</property>
                         <property name="Label" translatable="yes">...</property>
                         <property name="UseUnderline">True</property>
-                        <signal name="Clicked" handler="buttonBrowseKeytool_Clicked" />
                       </widget>
                       <packing>
                         <property name="Position">1</property>
@@ -172,7 +171,6 @@
                         <property name="HasLabel">True</property>
                         <property name="UseUnderline">True</property>
                         <property name="Group">group1</property>
-                        <signal name="Toggled" handler="radioDefault_Toggled" />
                       </widget>
                       <packing>
                         <property name="Position">0</property>
@@ -221,7 +219,6 @@
                             <property name="Type">TextOnly</property>
                             <property name="Label" translatable="yes">...</property>
                             <property name="UseUnderline">True</property>
-                            <signal name="Clicked" handler="buttonBrowseKeystore_Clicked" />
                           </widget>
                           <packing>
                             <property name="LeftAttach">2</property>
@@ -707,6 +704,136 @@
             <property name="Fill">False</property>
           </packing>
         </child>
+        <child>
+          <widget class="Gtk.Frame" id="frame5">
+            <property name="MemberName" />
+            <property name="ShadowType">None</property>
+            <child>
+              <widget class="Gtk.Alignment" id="GtkAlignment5">
+                <property name="MemberName" />
+                <property name="Xalign">0</property>
+                <property name="Yalign">0</property>
+                <property name="LeftPadding">12</property>
+                <child>
+                  <widget class="Gtk.HBox" id="hbox5">
+                    <property name="MemberName" />
+                    <property name="Spacing">6</property>
+                    <child>
+                      <widget class="Gtk.Entry" id="entryFacebookSHA1">
+                        <property name="MemberName" />
+                        <property name="CanFocus">True</property>
+                        <property name="IsEditable">False</property>
+                        <property name="InvisibleChar">●</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">0</property>
+                        <property name="AutoSize">True</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="Gtk.Button" id="buttonCopyFacebookSHA1">
+                        <property name="MemberName" />
+                        <property name="CanFocus">True</property>
+                        <property name="Type">TextOnly</property>
+                        <property name="Label" translatable="yes">Copy</property>
+                        <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="buttonCopyFacebookSHA1_Clicked" />
+                      </widget>
+                      <packing>
+                        <property name="Position">1</property>
+                        <property name="AutoSize">True</property>
+                        <property name="Expand">False</property>
+                        <property name="Fill">False</property>
+                      </packing>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="Gtk.Label" id="GtkLabel14">
+                <property name="MemberName" />
+                <property name="LabelProp" translatable="yes">&lt;b&gt;Facebook SHA1 Signature&lt;/b&gt;</property>
+                <property name="UseMarkup">True</property>
+              </widget>
+              <packing>
+                <property name="type">label_item</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="PackType">End</property>
+            <property name="Position">6</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="Gtk.Frame" id="frame1">
+            <property name="MemberName" />
+            <property name="ShadowType">None</property>
+            <child>
+              <widget class="Gtk.Alignment" id="GtkAlignment">
+                <property name="MemberName" />
+                <property name="Xalign">0</property>
+                <property name="Yalign">0</property>
+                <property name="LeftPadding">12</property>
+                <child>
+                  <widget class="Gtk.HBox" id="hbox4">
+                    <property name="MemberName" />
+                    <property name="Spacing">6</property>
+                    <child>
+                      <widget class="Gtk.Entry" id="entrySha256">
+                        <property name="MemberName" />
+                        <property name="CanFocus">True</property>
+                        <property name="IsEditable">False</property>
+                        <property name="InvisibleChar">●</property>
+                      </widget>
+                      <packing>
+                        <property name="Position">0</property>
+                        <property name="AutoSize">True</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="Gtk.Button" id="buttonCopySha256">
+                        <property name="MemberName" />
+                        <property name="CanFocus">True</property>
+                        <property name="Type">TextOnly</property>
+                        <property name="Label" translatable="yes">Copy</property>
+                        <property name="UseUnderline">True</property>
+                        <signal name="Clicked" handler="buttonCopySha256_Clicked" />
+                      </widget>
+                      <packing>
+                        <property name="Position">1</property>
+                        <property name="AutoSize">True</property>
+                        <property name="Expand">False</property>
+                        <property name="Fill">False</property>
+                      </packing>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="Gtk.Label" id="GtkLabel12">
+                <property name="MemberName" />
+                <property name="LabelProp" translatable="yes">&lt;b&gt;SHA256 Signature&lt;/b&gt;</property>
+                <property name="UseMarkup">True</property>
+              </widget>
+              <packing>
+                <property name="type">label_item</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="PackType">End</property>
+            <property name="Position">7</property>
+            <property name="AutoSize">True</property>
+            <property name="Expand">False</property>
+            <property name="Fill">False</property>
+          </packing>
+        </child>
       </widget>
     </child>
     <child internal-child="ActionArea">
@@ -724,7 +851,6 @@
             <property name="Label" translatable="yes">Close</property>
             <property name="UseUnderline">True</property>
             <property name="ResponseId">0</property>
-            <signal name="Clicked" handler="buttonCancel_Clicked" />
           </widget>
           <packing>
             <property name="Expand">False</property>

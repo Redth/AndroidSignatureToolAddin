@@ -3,9 +3,9 @@ using MonoDevelop.Components.Commands;
 using MonoDevelop.Ide;
 using MonoDevelop.Ide.Gui.Content;
 using MonoDevelop.Projects;
-using AndroidSigToolAddin.Dialogs;
+using AndroidKeystoreSignatureTool.Dialogs;
 
-namespace AndroidSigToolAddin
+namespace AndroidKeystoreSignatureTool
 {
 	public enum SignatureToolCommands
 	{

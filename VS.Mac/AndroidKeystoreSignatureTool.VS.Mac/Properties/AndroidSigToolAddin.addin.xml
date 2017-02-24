@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Addin name="Android Signature Tool"
 		id="AndroidSigTool" 
-       namespace="AndroidSigToolAddin"
+       namespace="AndroidKeystoreSignatureTool"
        author="Jon Dick" 
        copyright="Jon Dick" 
-       description="Helps find your MD5 and SHA1 signatures of your .keystore files, including the default Xamarin.Android generated debug.keystore file" 
+       description="Helps find your MD5, SHA1, SHA256 and Facebook SHA1 signatures of your .keystore files, including the default Xamarin.Android generated debug.keystore file" 
        category="Mobile Development"
        url= "http://redth.codes"
-       version="2.0.0" 
+       version="2.1.0" 
        flags="None">
 	<Runtime>	
-		<Import assembly="AndroidSigToolAddin.dll" />
+		<Import assembly="AndroidKeystoreSignatureTool.VS.Mac.dll" />
 	</Runtime>
     <!-- <Dependencies>
 		<Addin id="::MonoDevelop.Core" version="5.0" />
@@ -20,9 +20,9 @@
     </Dependencies> -->
 	<Extension path = "/MonoDevelop/Ide/Commands/Tools">  
         <Command id = "AndroidSignatureTool"  
-                 _label = "Android Signature Tool"  
-                 _description = "Find MD5 and SHA1 signatures for .keystore files"
-                  defaultHandler = "AndroidSigToolAddin.SignatureToolCommandHandler" />  
+                 _label = "Keystore Signature Tool"  
+                 _description = "Find MD5, SHA1, SHA256 and Facebook SHA1 signatures for .keystore files"
+                  defaultHandler = "AndroidKeystoreSignatureTool.SignatureToolCommandHandler" />  
     </Extension> 
 <!--	<Extension path = "/MonoDevelop/Ide/Commands/Project">  
     <Command id = "DavesAddin.VersionChangerCommands.UpdateVersions"  
@@ -30,8 +30,10 @@
              _description = "Change the version numbers"
              defaultHandler = "DavesAddin.VersionChangerHandler" />  
     </Extension>  -->
-    <Extension path = "/MonoDevelop/Ide/MainMenu/Tools">  
-        <CommandItem id="AndroidSignatureTool" />  
+    <Extension path = "/MonoDevelop/Ide/MainMenu/Tools">
+		<!--<SeparatorItem id="AndroidTools" _label="Android" insertbefore="CustomToolsSection" />-->
+        	<CommandItem id="AndroidSignatureTool" insertafter="AndroidTools" insertbefore="AndroidToolsEnd" />
+<!--		<SeparatorItem id="AndroidToolsEnd"/>-->
     </Extension>
 <!--    <Extension path = "/MonoDevelop/Ide/ContextMenu/ProjectPad">
 		 <Condition id="ItemType" value="Solution">

@@ -1,7 +1,0 @@
-<AddinProject appVersion="6.0">
-    <Project platforms="Linux Win32 Mac">
-        <AddinFile>AndroidSigToolAddin/bin/Debug/AndroidSigToolAddin.dll</AddinFile>
-        <BuildFile>AndroidSigToolAddin.sln</BuildFile>
-        <BuildConfiguration>Debug</BuildConfiguration>
-    </Project>
-</AddinProject>

@@ -1,23 +1,25 @@
 ﻿using System;
 using System.IO;
 
-namespace AndroidSignatureTool.Core
+namespace AndroidKeystoreSignatureGenerator
 {
 	public static class PlatformDetection
 	{
 		public readonly static bool IsMac;
         public readonly static bool IsLinux;
+		public readonly static bool IsWindows;
 
 		static PlatformDetection ()
 		{
 			IsMac = IsRunningOnMac();
-            IsLinux = IsRunningLinux();
+			IsLinux = IsRunningLinux();
+			IsWindows = !IsMac && !IsLinux;
 		}
 
-        static bool IsRunningLinux()
-        {
-            return System.Environment.OSVersion.Platform == System.PlatformID.Unix;
-        }
+		static bool IsRunningLinux()
+		{
+			return Environment.OSVersion.Platform == System.PlatformID.Unix;
+		}
 
 		//From Managed.Windows.Forms/XplatUI
 		static bool IsRunningOnMac ()
