@@ -5,44 +5,74 @@ namespace AndroidKeystoreSignatureGenerator
 {
 	public static class PlatformDetection
 	{
-		public readonly static bool IsMac;
-        public readonly static bool IsLinux;
-		public readonly static bool IsWindows;
+		public static bool IsMac
+        {
+            get
+            {
+                if (IsWindows)
+                    return false;
 
-		static PlatformDetection ()
-		{
-			IsMac = IsRunningOnMac();
-			IsLinux = IsRunningLinux();
-			IsWindows = !IsMac && !IsLinux;
-		}
+                return MacDetector.IsRunningOnMac();
+            }
+        }
 
-		static bool IsRunningLinux()
-		{
-			return Environment.OSVersion.Platform == System.PlatformID.Unix;
-		}
+        public static bool IsLinux
+        {
+            get
+            {
+                if (IsWindows)
+                    return false;
 
-		//From Managed.Windows.Forms/XplatUI
-		static bool IsRunningOnMac ()
-		{
-			IntPtr buf = IntPtr.Zero;
-			try {
-				buf = System.Runtime.InteropServices.Marshal.AllocHGlobal (8192);
-				// This is a hacktastic way of getting sysname from uname ()
-				if (uname (buf) == 0) {
-					string os = System.Runtime.InteropServices.Marshal.PtrToStringAnsi (buf);
-					if (os == "Darwin")
-						return true;
-				}
-			} catch {
-			} finally {
-				if (buf != IntPtr.Zero)
-					System.Runtime.InteropServices.Marshal.FreeHGlobal (buf);
-			}
-			return false;
-		}
+                return !IsMac;
+            }
+        }
 
-		[System.Runtime.InteropServices.DllImport ("libc")]
-		static extern int uname (IntPtr buf);
+		public static bool IsWindows
+        {
+            get
+            {
+                var p = Environment.OSVersion.Platform;
+
+                return p != PlatformID.Unix && p != PlatformID.MacOSX;
+            }
+        }
 	}
+
+    static class MacDetector
+    {
+        static MacDetector()
+        {
+            System.Diagnostics.Debug.WriteLine("MacDetector ctor");
+
+        }
+
+        public static bool IsRunningOnMac()
+        {
+            IntPtr buf = IntPtr.Zero;
+            try
+            {
+                buf = System.Runtime.InteropServices.Marshal.AllocHGlobal(8192);
+                // This is a hacktastic way of getting sysname from uname ()
+                if (uname(buf) == 0)
+                {
+                    string os = System.Runtime.InteropServices.Marshal.PtrToStringAnsi(buf);
+                    if (os == "Darwin")
+                        return true;
+                }
+            }
+            catch
+            {
+            }
+            finally
+            {
+                if (buf != IntPtr.Zero)
+                    System.Runtime.InteropServices.Marshal.FreeHGlobal(buf);
+            }
+            return false;
+        }
+
+        [System.Runtime.InteropServices.DllImport("libc")]
+        static extern int uname(IntPtr buf);
+    }
 }
 

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="AndroidKeystoreSignatureTool.VSIX.Jonathan Dick.2291129b-757d-452c-a662-31c9e889739f" Version="1.0" Language="en-US" Publisher="Jonathan Dick" />
+    <DisplayName>Android Keystore Signature Tool</DisplayName>
+    <Description xml:space="preserve">Generate SHA1, SHA256, MD5 and Facebook SHA1 signatures from your Keystore files easily!  You can specify your own .keystore file information, or let the extension find your default Xamarin Debug Keystore file for you.</Description>
+    <MoreInfo>http://github.com/Redth/AndroidSignatureToolAddin</MoreInfo>
+    <License>LICENSE.txt</License>
+    <PreviewImage>VSIX.Screenshot.png</PreviewImage>
+    <Tags>Android, Keystore, Signature, Hash, md5, sha1, sha256, facebook</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Community" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.14.0" DisplayName="Visual Studio MPF 14.0" d:Source="Installed" Version="[14.0]" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>

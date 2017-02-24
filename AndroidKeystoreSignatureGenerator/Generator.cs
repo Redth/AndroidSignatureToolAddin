@@ -3,6 +3,8 @@ using System.Text;
 using System.IO;
 using System.Text.RegularExpressions;
 
+[assembly: System.Reflection.AssemblyKeyFileAttribute("androidkeystoresignaturegenerator.snk")]
+
 namespace AndroidKeystoreSignatureGenerator
 {
 	public interface IAndroidKeystoreSignatureGenerator
@@ -47,7 +49,7 @@ namespace AndroidKeystoreSignatureGenerator
 
 		public static IAndroidKeystoreSignatureGenerator Create(string keytoolPath, string keystorePath, string keystoreAlias, string keystoreStorepass = "", string keystoreKeypass = "")
 		{
-			if (string.IsNullOrEmpty(keytoolPath))
+            if (string.IsNullOrEmpty(keytoolPath))
 				keytoolPath = LocationHelper.GetJavaKeytoolPath();
 
 			if (!File.Exists(keytoolPath))
@@ -69,7 +71,6 @@ namespace AndroidKeystoreSignatureGenerator
 			KeystoreAlias = keystoreAlias;
 			KeystoreStorepass = keystoreStorepass;
 			KeystoreKeypass = keystoreKeypass;
-
 		}
 
 		public string KeytoolPath { get; private set; }
