@@ -106,7 +106,7 @@ namespace AndroidKeystoreSignatureTool.Dialogs
 			// Widget AndroidKeystoreSignatureTool.Dialogs.SignatureToolDialog
 			this.WidthRequest = 700;
 			this.Name = "AndroidKeystoreSignatureTool.Dialogs.SignatureToolDialog";
-			this.Title = global::Mono.Unix.Catalog.GetString("Android Signature Tool");
+			this.Title = global::Mono.Unix.Catalog.GetString("Android Keystore Signature Tool");
 			this.WindowPosition = ((global::Gtk.WindowPosition)(4));
 			this.Modal = true;
 			this.Resizable = false;
@@ -150,7 +150,7 @@ namespace AndroidKeystoreSignatureTool.Dialogs
 			this.frame2.Add(this.GtkAlignment1);
 			this.GtkLabel2 = new global::Gtk.Label();
 			this.GtkLabel2.Name = "GtkLabel2";
-			this.GtkLabel2.LabelProp = global::Mono.Unix.Catalog.GetString("<b>Locate Java keytool</b>");
+			this.GtkLabel2.LabelProp = global::Mono.Unix.Catalog.GetString("<b>Java keytool Location:</b>");
 			this.GtkLabel2.UseMarkup = true;
 			this.frame2.LabelWidget = this.GtkLabel2;
 			w1.Add(this.frame2);
@@ -174,6 +174,7 @@ namespace AndroidKeystoreSignatureTool.Dialogs
 			this.radioDefault = new global::Gtk.RadioButton(global::Mono.Unix.Catalog.GetString("Default Xamarin.Android generated debug.keystore"));
 			this.radioDefault.CanFocus = true;
 			this.radioDefault.Name = "radioDefault";
+			this.radioDefault.Active = true;
 			this.radioDefault.DrawIndicator = true;
 			this.radioDefault.UseUnderline = true;
 			this.radioDefault.Group = new global::GLib.SList(global::System.IntPtr.Zero);

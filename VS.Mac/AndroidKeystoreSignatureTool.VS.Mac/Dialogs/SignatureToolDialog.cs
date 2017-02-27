@@ -45,7 +45,22 @@ namespace AndroidKeystoreSignatureTool.Dialogs
 			clipboard.Text = entryFacebookSHA1.Text;
 		}
 
-		protected void buttonGenerate_Clicked(object sender, EventArgs e)
+		protected async void buttonGenerate_Clicked(object sender, EventArgs e)
+		{
+			buttonGenerate.Sensitive = false;
+			buttonGenerate.Label = "Generating Signtures...";
+
+			try
+			{
+				await Task.Run(() => generate());
+			}
+			catch { }
+
+			buttonGenerate.Label = "Generate Signtures";
+			buttonGenerate.Sensitive = true;
+		}
+
+		void generate()
 		{
 			var keytoolPath = entryKeytool.Text;
 
