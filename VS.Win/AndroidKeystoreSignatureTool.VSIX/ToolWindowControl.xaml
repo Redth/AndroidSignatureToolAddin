@@ -72,7 +72,14 @@
                     <TextBox Grid.Row="3" Grid.Column="1" Padding="4" Text="{Binding Keypass, Mode=TwoWay}" IsEnabled="{Binding CustomKeystore}"></TextBox>
                 </Grid>
 
-                <Button Content="Generate Signatures" HorizontalAlignment="Stretch" Margin="0,20,0,20" Padding="4" Click="GenerateSignaturesButton_Click" />
+                <Button Name="buttonGenerate" HorizontalAlignment="Stretch" Margin="0,20,0,20" Padding="4" Click="GenerateSignaturesButton_Click">
+                    <Button.Content>
+                        <Grid>
+                            <TextBlock Name="textGenerate" Visibility="Visible">Generate Signatures</TextBlock>
+                            <TextBlock Name="textGenerating" Visibility="Collapsed">Generating Signatures...</TextBlock>
+                        </Grid>
+                    </Button.Content>
+                </Button>
 
                 <Grid>
                     <Grid.ColumnDefinitions>

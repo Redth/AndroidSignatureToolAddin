@@ -7,6 +7,7 @@
 namespace AndroidKeystoreSignatureTool.VSIX
 {
     using System.Diagnostics.CodeAnalysis;
+    using System.Threading.Tasks;
     using System.Windows;
     using System.Windows.Controls;
 
@@ -46,11 +47,19 @@ namespace AndroidKeystoreSignatureTool.VSIX
             viewModel.KeystoreMode = mode;
         }
         
-        private void GenerateSignaturesButton_Click(object sender, RoutedEventArgs e)
+        private async void GenerateSignaturesButton_Click(object sender, RoutedEventArgs e)
         {
-            viewModel.GenerateSignatures();
-        }
+            buttonGenerate.IsEnabled = false;
+            textGenerate.Visibility = Visibility.Collapsed;
+            textGenerating.Visibility = Visibility.Visible;
 
+            await viewModel.GenerateSignaturesAsync();
+
+            textGenerating.Visibility = Visibility.Collapsed;
+            textGenerate.Visibility = Visibility.Visible;
+            buttonGenerate.IsEnabled = true;
+        }
+        
         private void BrowseKeytoolButton_Click(object sender, RoutedEventArgs e)
         {
             var file = OpenFile("keytool.exe", "Keytool.exe (keytool.exe)");

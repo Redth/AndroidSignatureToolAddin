@@ -21,34 +21,60 @@ namespace AndroidKeystoreSignatureTool.VSIX
                 System.Diagnostics.Debug.WriteLine(ex);
             }
         }
-
-        ILocations locationHelper;
-
-        public void GenerateSignatures ()
-        {
-            IAndroidKeystoreSignatureGenerator generator;
-            if (KeystoreMode == "xamarin" || string.IsNullOrEmpty(KeystorePath))
-                generator = KeystoreSignatureGeneratorFactory.CreateForXamarinDebugKeystore(KeytoolPath);
-            else
-                generator = KeystoreSignatureGeneratorFactory.Create(KeytoolPath, KeystorePath, Alias, Storepass, Keypass);
-
-            var signatures = generator.GenerateSignatures();
-            Md5 = signatures?.Md5 ?? "";
-            Sha1 = signatures?.Sha1 ?? "";
-            Sha256 = signatures?.Sha256 ?? "";
-            NotifyPropertyChanged(nameof(Md5));
-            NotifyPropertyChanged(nameof(Sha1));
-            NotifyPropertyChanged(nameof(Sha256));
-
-            var fbSignatures = generator.GenerateFacebookSignatures();
-            FacebookSha1 = fbSignatures?.Sha1;
-            NotifyPropertyChanged(nameof(FacebookSha1));
-        }
         
-        public string Md5 { get; private set; }
-        public string Sha1 { get; private set; }
-        public string Sha256 { get; private set; }
-        public string FacebookSha1 { get; private set; }
+        public Task GenerateSignaturesAsync ()
+        {
+            return Task.Run(() => {
+               try
+               {
+                   IAndroidKeystoreSignatureGenerator generator;
+                   if (KeystoreMode == "xamarin" || string.IsNullOrEmpty(KeystorePath))
+                       generator = KeystoreSignatureGeneratorFactory.CreateForXamarinDebugKeystore(KeytoolPath);
+                   else
+                       generator = KeystoreSignatureGeneratorFactory.Create(KeytoolPath, KeystorePath, Alias, Storepass, Keypass);
+
+                   var signatures = generator.GenerateSignatures();
+                   Md5 = signatures?.Md5 ?? string.Empty;
+                   Sha1 = signatures?.Sha1 ?? string.Empty;
+                   Sha256 = signatures?.Sha256 ?? string.Empty;
+
+                   var fbSignatures = generator.GenerateFacebookSignatures();
+                   FacebookSha1 = fbSignatures?.Sha1 ?? string.Empty;
+               }
+               catch (Exception ex)
+               {
+                   Console.WriteLine("Failed to generate signature: {0}", ex);
+               }
+            });
+        }
+
+        string md5 = string.Empty;
+        public string Md5
+        {
+            get { return md5; }
+            set { md5 = value; NotifyPropertyChanged(nameof(Md5)); }
+        }
+
+        string sha1 = string.Empty;
+        public string Sha1
+        {
+            get { return sha1; }
+            set { sha1 = value; NotifyPropertyChanged(nameof(Sha1)); }
+        }
+
+        string sha256 = string.Empty;
+        public string Sha256
+        {
+            get { return sha256; }
+            set { sha256 = value; NotifyPropertyChanged(nameof(Sha256)); }
+        }
+
+        string facebookSha1 = string.Empty;
+        public string FacebookSha1
+        {
+            get { return facebookSha1; }
+            set { facebookSha1 = value; NotifyPropertyChanged(nameof(FacebookSha1)); }
+        }
 
         bool customKeystore = false;
         public bool CustomKeystore
@@ -92,7 +118,12 @@ namespace AndroidKeystoreSignatureTool.VSIX
             set { keystorePath = value; NotifyPropertyChanged(nameof(KeystorePath)); }
         }
 
-        public string KeystoreMode = "xamarin";
+        string keystoreMode = "xamarin";
+        public string KeystoreMode
+        {
+            get { return keystoreMode; }
+            set { keystoreMode = value; NotifyPropertyChanged(nameof(KeystoreMode)); }
+        }
 
         public void NotifyPropertyChanged (string propertyName)
         {

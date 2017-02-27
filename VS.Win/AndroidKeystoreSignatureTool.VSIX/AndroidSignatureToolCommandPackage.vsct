@@ -73,6 +73,13 @@
           <ButtonText>ToolWindow</ButtonText>
         </Strings>
       </Button>-->
+      <Button guid="guidAndroidSignatureToolCommandPackageCmdSet" id="cmdidSignaturesToolWindowCommand" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1" />
+        <Icon guid="guidImages3" id="bmpPic1" />
+        <Strings>
+          <ButtonText>SignaturesToolWindow</ButtonText>
+        </Strings>
+      </Button>
     </Buttons>
 
     <!--The bitmaps section is used to define the bitmaps that are used for the commands.-->
@@ -85,6 +92,7 @@
       <Bitmap guid="guidImages" href="Resources\AndroidSignatureToolCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
       <Bitmap guid="guidImages1" href="Resources\AndroidSignatureToolWindowCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
       <Bitmap guid="guidImages2" href="Resources\ToolWindowCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
+      <Bitmap guid="guidImages3" href="Resources\SignaturesToolWindowCommand.png" usedList="bmpPic1, bmpPic2, bmpPicSearch, bmpPicX, bmpPicArrows, bmpPicStrikethrough" />
     </Bitmaps>
   </Commands>
 
@@ -119,6 +127,19 @@
     </GuidSymbol>
   
     <GuidSymbol value="{06355833-ae0e-4595-a899-6f1bcd608a78}" name="guidImages2">
+      <IDSymbol name="bmpPic1" value="1" />
+      <IDSymbol name="bmpPic2" value="2" />
+      <IDSymbol name="bmpPicSearch" value="3" />
+      <IDSymbol name="bmpPicX" value="4" />
+      <IDSymbol name="bmpPicArrows" value="5" />
+      <IDSymbol name="bmpPicStrikethrough" value="6" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{3ad9cdeb-1b08-4312-b651-1001f4d33d97}" name="guidAndroidSignatureToolCommandPackageCmdSet">
+      <IDSymbol value="256" name="cmdidSignaturesToolWindowCommand" />
+    </GuidSymbol>
+  
+    <GuidSymbol value="{37a77edb-454d-4bcc-87a3-998ad441de80}" name="guidImages3">
       <IDSymbol name="bmpPic1" value="1" />
       <IDSymbol name="bmpPic2" value="2" />
       <IDSymbol name="bmpPicSearch" value="3" />
