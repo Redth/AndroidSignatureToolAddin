@@ -7,7 +7,7 @@
        description="Helps find your MD5, SHA1, SHA256 and Facebook SHA1 signatures of your .keystore files, including the default Xamarin.Android generated debug.keystore file" 
        category="Mobile Development"
        url= "http://redth.codes"
-       version="2.1.2"
+       version="2.1.3"
        flags="None">
 	<Runtime>	
 		<Import assembly="AndroidKeystoreSignatureTool.VS.Mac.dll" />
