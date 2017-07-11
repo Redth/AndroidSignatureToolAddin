@@ -62,7 +62,7 @@ namespace AndroidKeystoreSignatureTool.VSIX
         
         private void BrowseKeytoolButton_Click(object sender, RoutedEventArgs e)
         {
-            var file = OpenFile("keytool.exe", "Keytool.exe (keytool.exe)");
+            var file = OpenFile("keytool.exe", "Keytool.exe (keytool.exe)|keytool.exe");
 
             if (!string.IsNullOrEmpty(file))
                 viewModel.KeytoolPath = file;
@@ -70,7 +70,7 @@ namespace AndroidKeystoreSignatureTool.VSIX
 
         private void BrowseKeystoreButton_Click(object sender, RoutedEventArgs e)
         {
-            var file = OpenFile(".keystore", "Keystore Files (*.keystore)");
+            var file = OpenFile(".keystore", "Keystore Files (*.keystore)|*.keystore");
 
             if (!string.IsNullOrEmpty(file))
                 viewModel.KeystorePath = file;
