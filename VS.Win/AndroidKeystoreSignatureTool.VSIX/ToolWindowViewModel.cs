@@ -28,7 +28,7 @@ namespace AndroidKeystoreSignatureTool.VSIX
                try
                {
                    IAndroidKeystoreSignatureGenerator generator;
-                   if (KeystoreMode == "xamarin" || string.IsNullOrEmpty(KeystorePath))
+                   if (KeystoreMode == "xamarin") // || string.IsNullOrEmpty(KeystorePath))
                        generator = KeystoreSignatureGeneratorFactory.CreateForXamarinDebugKeystore(KeytoolPath);
                    else
                        generator = KeystoreSignatureGeneratorFactory.Create(KeytoolPath, KeystorePath, Alias, Storepass, Keypass);
