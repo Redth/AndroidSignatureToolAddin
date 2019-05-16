@@ -540,6 +540,10 @@ namespace AndroidKeystoreSignatureTool.Dialogs
 			this.buttonCopySha1.Clicked += new global::System.EventHandler(this.buttonSha1Copy_Clicked);
 			this.buttonCopySha256.Clicked += new global::System.EventHandler(this.buttonCopySha256_Clicked);
 			this.buttonCopyFacebookSHA1.Clicked += new global::System.EventHandler(this.buttonCopyFacebookSHA1_Clicked);
+			this.buttonBrowseKeytool.Clicked += new global::System.EventHandler(this.buttonBrowseKeytool_Clicked);
+			this.button15.Clicked += new global::System.EventHandler(this.buttonBrowseKeystore_Clicked);
+			this.radioDefault.Toggled += new global::System.EventHandler(this.radioDefault_Toggled);
+			
 		}
 	}
 }
