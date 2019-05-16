@@ -1,4 +1,4 @@
-<AddinProject appVersion="7.0">
+<AddinProject appVersion="8.1">
     <Project platforms="Linux Win32 Mac">
         <AddinFile>AndroidKeystoreSignatureTool.VS.Mac/bin/Release/AndroidKeystoreSignatureTool.VS.Mac.dll</AddinFile>
         <BuildFile>AndroidKeystoreSignatureTool.VS.Mac.sln</BuildFile>
